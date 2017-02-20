@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 13-14</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="content" class="container"></div>
+<div id="modal">
+    <div id="message"></div>
+</div>
+
+<script id="test-template" type="text/x-handlebars-template">
+    <h2 class="test-title">Тест по литературе</h2>
+    <form action="#" id="test14">
+        {{#each questions}}
+        <p class="question">{{qNumber}}. {{question}}</p>
+        <ul class="answers" data-id="{{@index}}">
+            <li class="answer">
+                <input type="checkbox" class="answer" value="{{answer1}}">
+                {{answer1}}
+            </li>
+            <li class="answer">
+                <input type="checkbox" class="answer" value="{{answer2}}">
+                {{answer2}}
+            </li>
+            <li class="answer">
+                <input type="checkbox" class="answer" value="{{answer3}}">
+                {{answer3}}
+            </li>
+            <li class="answer">
+                <input type="checkbox" class="answer" value="{{answer4}}">
+                {{answer4}}
+            </li>
+        </ul>
+        {{/each}}
+
+        <input id="check-answers" type="submit" value="Ваш результат">
+    </form>
+</script>
+
+
+</body>
+</html>
